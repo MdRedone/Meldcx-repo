@@ -19,6 +19,7 @@ afterEach((done) => {
 
 const { uploadFile, getFileStream } = require("../s3");
 
+// it will check the proper and undefined data at the same time
 test("POST /api/files", async () => {
   const file = {
     path: "add api key in reteam.png",
@@ -32,7 +33,7 @@ test("POST /api/files", async () => {
       expect("Created");
     });
 });
-
+// It will check only the valid id 
 test("GET /api/files/eb3b0aad9fb469d00e0a6066feb742cf", async () => {
   await supertest(app)
     .get("/api/files/eb3b0aad9fb469d00e0a6066feb742cf")
@@ -43,7 +44,7 @@ test("GET /api/files/eb3b0aad9fb469d00e0a6066feb742cf", async () => {
       expect("Got the value");
     });
 });
-
+// it will check all cases
 test("DELETE /api/files/:key", async () => {
   await supertest(app)
     .delete("/api/files/:key")
