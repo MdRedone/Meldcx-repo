@@ -22,11 +22,11 @@ Sotring files in the local folder as well.
 npm install
 ```
 
-### Run Tests
+### Run Project
 ```
 npm start
 
-
+```
 ### Run Tests
 ```
 npm test
