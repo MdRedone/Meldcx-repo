@@ -1,9 +1,21 @@
 # Testing NodeJs/Express API with Jest and Supertest
 
-Why you should write tests?
-To make sure you do not break any existing code.
-To guarantee that new code works as intended.
-you  can find more in [my tutorial](https://dev.to/mhmdlotfy96/testing-a-rest-api-in-node-js-with-express-using-mocha-and-chai-1258)
+Write Three apis.
+1. post api.
+2. get api.
+3. delete api.
+
+Configure AWS for storing files in the S3 bucket.
+
+Complete three apis for storing, geeting and deleteing data from bucket.
+
+Write proper unit test for three apis.
+
+Sotring files in the local folder as well.
+
+
+
+
 
 ### Project setup
 ```
@@ -13,5 +25,10 @@ npm install
 ### Run Tests
 ```
 npm start
+
+
+### Run Tests
+```
+npm test
 ```
 
