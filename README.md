@@ -47,5 +47,5 @@ For second point i can run a cron job where i will maintain another database for
 
 For integration test, i can do it using mocha. 
 
-So from overall finings everything is possible from myend.     
+So from overall findings everything is possible from myend.     
 
