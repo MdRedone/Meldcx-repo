@@ -10,12 +10,13 @@ const upload = multer({ dest: "uploads/" });
 
 const { uploadFile, getFileStream } = require("../s3");
 
+// get data from aws s3 bucket
 router.get("/files/:key", (req, res) => {
   const key = req.params.key;
   const readStream = getFileStream(key);
   readStream.pipe(res);
 });
-
+// post data to aws s3 bucket and local holder
 router.post("/files", upload.single("image"), async (req, res) => {
   const file = req.file;
 
@@ -28,6 +29,8 @@ router.post("/files", upload.single("image"), async (req, res) => {
     res.send("File Not Found");
   }
 });
+
+// delete data from awsS3 bucket
 
 router.delete("/files/:key", async (req, res) => {
   const filename = req.params.key;
